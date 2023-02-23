@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE GAME</title>
+    <link rel="stylesheet" href="tic.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="game.js"></script>
+    
+</head>
+<body>
+    <div class="grad1">
+    <h1 class="head">TIC TAC TOE GAME</h1>
+</div>
+<!--
+    <p class="headtext">Select Your Game Type</p>
+
+    <div class="row">
+        <div class="column">
+            <input type="radio" id="inp1" name="game" onclick="myFunction() "> with Computer
+        </div>
+    -->    
+        <div class="column" style="margin-left: 20%;">
+            <input type="radio" id="inp2" name="game" onclick="myFunction2()"> Click to Play
+        </div>
+        <br>
+
+    <input type="number" id="inp3" placeholder="Against Computer">
+</div>
+
+<br><br>
+<div id="inp5" style="text-align: center; margin-left: 33%; ">
+
+    <nav class="radio">
+    <p class="headtext">Select Your Player</p>
+    <input style="font-size: 40px; " type="radio" name="player" > X
+    <input  style="font-size: 40px; "type="radio" name="player"> O 
+</nav>
+    <p class="radio">Starting with X</p>
+        
+		<!-- show player turn -->
+		<p id="print"></p>
+
+<div class="table">
+		<input type="text" id="b1" onclick=
+			"myfunc_3(); myfunc();" readonly>
+
+		<input type="text" id="b2" onclick=
+			"myfunc_4(); myfunc();" readonly>
+
+		<input type="text" id="b3" onclick=
+			"myfunc_5(); myfunc();" readonly>
+		<br><br>
+</div>
+
+<div class="table">
+		<input type="text" id="b4" onclick=
+			"myfunc_6(); myfunc();" readonly>
+			
+		<input type="text" id="b5" onclick=
+			"myfunc_7(); myfunc();" readonly>
+
+		<input type="text" id="b6" onclick=
+			"myfunc_8(); myfunc();" readonly>
+		<br><br>
+</div>
+
+<div class="table">
+		<input type="text" id="b7" onclick=
+			"myfunc_9(); myfunc();" readonly>
+
+		<input type="text" id="b8" onclick=
+			"myfunc_10();myfunc();" readonly>
+
+		<input type="text" id="b9" onclick=
+			"myfunc_11();myfunc();"style="background-color: steelblue; height: 100px;  font-size: 60px;
+            " readonly>
+</div>
+		<br><br><br>
+		<button id="but" onclick="myfunc_2()">
+			RESET
+		</button>
+
+		<br><br>
+	</div>
+</div>
+
+    <div id="inp4" style="text-align: center; margin-left: 33%; ">
+        <div class="modal" id="gameover-msg" aria-hidden="true">
+            <div class="modal-container"> 
+                <div class="modal-header">
+                    <h3 class="modal-title">Game Over</h3>
+                </div>
+                <div class="modal-body">
+                    Congratulations, you won!
+                </div>
+                <div class="modal-footer">
+                    <button onclick="window.location.href = 'tictactoe-master/index.html';" type="button" class="modal-btn" id="quit">
+                        Quit
+                    </button>
+                    <button t ype="button" class="modal-btn" id="play-again" onclick="modalControl(this)">
+                        Play again
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <section class="game-panel">
+            <div class="title-area">
+                <h1 class="bg-color-title head-text-color" onclick="window.location.href = 'tictactoe-master/index.html';">tic tac toe</h1>
+            </div>
+            <div class="btn-area">
+                <button type="button" class="bg-color-button menu-btn" id="start-btn" onclick="startGame()">start</button>
+            </div>
+            <div id="user-instruction"></div>
+        </section>
+        <div class="board-area">
+          <div class="board">
+            <div class="board-square" id="1" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark1">
+                <div class="space" id="space1"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="2" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark2">
+                <div class="space" id="space2"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="3" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark3">
+                <div class="space" id="space3"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="4" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark4">
+                <div class="space" id="space4"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="5" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark5">
+                <div class="space" id="space5"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="6" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark6">
+                <div class="space" id="space6"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="7" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark7">
+                <div class="space" id="space7"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="8" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark8">
+                <div class="space" id="space8"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+            <div class="board-square" id="9" onclick="makeUserMark(this)">
+              <div class="mark marker-font" id="mark9">
+                <div class="space" id="space9"></div>
+                <div class="potential-mark"></div>
+              </div>
+            </div>
+          </div>
+        </div>   
+    </div>
+<!-->
+</body>
+</html>

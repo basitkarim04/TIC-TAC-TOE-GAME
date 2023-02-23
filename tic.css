@@ -1,0 +1,644 @@
+  /* scrollbar */
+            /* width */
+            ::-webkit-scrollbar {
+ 
+                width: 13px;
+               
+               }
+               
+               /* Track */
+               ::-webkit-scrollbar-track {
+                background:black; 
+               
+               }
+               
+               /* Handle */
+               ::-webkit-scrollbar-thumb {
+                background:  steelblue; 
+                border: 0.5px solid  steelblue;
+                border-radius: 20px;
+               }
+
+
+#inp3 {
+    margin-top: 80px;
+    display: none;
+    margin-right: 100px;
+    width: 30%;
+}
+#inp4 {
+    margin-top: 80px;
+    display: none;
+    margin-right:100px;
+    width: 30%;
+}
+#inp5 {
+    margin-top: 80px;
+    display: none;
+    margin-right:100px;
+    width: 30%;
+}
+@media screen and (min-width: 200px){
+body{
+    text-align: center;
+    background-color:cadetblue;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.column{
+    width: 50%;
+    float: left;
+    font-size: 30px;
+    font-style: oblique;
+}
+.aside{
+    float: left;
+    padding-left: 1%;
+    padding-top: 4%;
+    height: 15px;
+}
+.inp
+{
+    height: 40px; 
+    width: 15%;
+}
+.inp:hover{
+    cursor: pointer;
+}
+}
+@media screen and (min-width: 400px){
+.head{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    margin-left: 30%;
+    padding-top: 3%;
+    padding-right: 24%;
+    color: #ebe18c;
+}
+.grad1{
+    height: 150px;
+    background-image: linear-gradient(to bottom right, steelblue , black);
+    width: 60%;
+    margin-left: 18%;
+}
+.headtext{
+    font-size: 60px;
+    font-style: italic; 
+    font-weight: bolder;
+}
+.radio
+{
+    font-size: 60px;
+    font-style: oblique;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#turn{
+    font-size: 20px;
+    color: lightseagreen;
+    font-weight: bolder;
+}	/* CSS Code */
+}
+
+/* 3*3 Grid */
+#b1, #b2, #b3, #b4, #b5,
+#b6, #b7, #b8, #b9 {
+    width: 80px;
+    height: 52px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 30px;
+    text-align: center;
+}
+#b1, #b2, #b3, #b4, #b5,
+#b6, #b7, #b8, #b9 .hover {
+    background-color:steelblue;
+    font-size: 60px;
+    height: 100px;
+}
+
+
+/* Reset Button */
+#but {
+    box-sizing: border-box;
+    width: 95px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+    margin: auto;
+    border-radius: 4px;
+    font-family: Verdana,
+        Geneva, Tahoma, sans-serif;
+
+    background-color: dodgerblue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media screen and (min-width:576px){
+/* Player turn space */
+#print {
+    font-style:oblique;
+    color:#000;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+/* Main Container */
+#main {
+    text-align: center;
+}
+
+/* Game Instruction Text */
+#ins {
+    font-style:oblique;
+    color: dodgerblue;
+    font-size: 17px;
+}
+}
+
+@media screen and (max-width:400px)  {
+.table{
+    display: flex;
+    font-size: larger;
+}
+.headtext{
+    font-size: medium;
+    font-style: italic; 
+    font-weight: bolder;
+}
+
+.grad1{
+    height:auto;
+    background-image: linear-gradient(to bottom right, steelblue , black);
+    width: auto;
+    margin-left:auto;
+}
+
+.radio
+{
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bolder;
+    cursor: pointer;
+    display: inline;
+    flex-direction: row;
+    height: auto;
+}
+}
+@media screen and (max-width:900px) and (min-width:400px){
+    
+.headtext{
+    font-size: medium;
+    font-style: italic; 
+    font-weight: bolder;
+}
+
+.grad1{
+    height:auto;
+    background-image: linear-gradient(to bottom right, steelblue , black);
+    width: auto;
+    margin-left:auto;
+}
+.table{
+    display: flex;
+    font-size: larger;
+}
+
+.radio
+{
+    font-size: large;
+    display: inline;
+    flex-direction: row;
+    height: auto;
+    font-style: oblique;
+    font-weight: bolder;
+    cursor: pointer;
+}
+}
+
+/************************************************* Colors */
+
+.bg-color-body {
+    background-color: #dc3f1c;
+  }
+  .head-text-color {
+    color: #ebe18c;
+  }
+  .bg-color-title {
+    background-color: #dc3f1c;
+  }
+  
+  .bg-color-button {
+    background-color: #d8a027;
+  }
+  .bg-color-board {
+    background-color: #448d7a;
+  }
+  .bg-color-boardsquare {
+    background-color: #88a764;
+  }
+  /*************************************************  Colors   End  */
+  
+  /*************************************************  Global        */
+  
+  
+  
+  /*************************************************  Main Panel    */
+  .main-panel{
+      display: grid;
+      padding: 20px;
+      grid-template-rows: 2fr 3fr;
+  }
+  .main-panel .title-area{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      margin: 40px 0;
+      padding: 4px;
+      width: 100%;
+  }
+  .main-panel .menu-area {
+      display:grid;
+      grid-gap:10px;
+  }
+  .switch-on{
+      color: #d8a027;
+      background-color: #000;
+  }
+  
+  @media screen and (min-width: 768px){
+      .main-panel{
+          grid-template-rows: 2fr 1fr;
+      }
+      
+      .main-panel .menu-area {
+          display:grid;
+          grid-template-columns:1fr 1fr 1fr;
+      }
+  }
+  
+  /*************************************************  Main Panel   End  */
+  
+  /************************************************* Tutorial     */
+  
+  .tutorial{
+      display:none;
+  }
+  .text-container{
+      width: 100%;
+      display: flex;
+      background-color: #ebe18c;
+  }
+  .menu-text{
+      padding: 20px;
+      padding-bottom: 5px;
+      font-family: "Niramit" , sans-serif;
+  }
+  .menu-text h2 {
+      margin-bottom: 10px;
+  }
+  .menu-text h3 {
+      font-size: 24px;
+  }
+  .winning-example{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  #rules{
+      list-style: none;   
+      padding: 0;
+  }
+  #rules li {
+      margin-bottom: 10px;
+  }
+  
+  @media screen and (min-width:576px){
+      .text-container{
+          justify-content: center;
+      }
+      .menu-text{
+          width: 406px;
+      }
+  } 
+  
+  @media screen and (min-width:992px){
+      .menu-text{
+          width: 560px;
+      }
+       p , li {
+          font-size: 20px;
+      }
+  }
+  /************************************************* Tutorial     End */
+  
+  /************************************************* Options     */
+  
+  .options{
+      display:none;
+  }
+  .option-grid-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .option-grid{
+      display: grid;
+      grid-template-columns: 85px 85px 85px;
+      padding: 20px;
+      
+  }
+  
+  .option-grid .middle{
+      height: 85px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+  }
+  
+  .board-square-option{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      color: #d8a027;
+      height: 85px;
+  }
+  .board-square-option:hover {
+      background-color: #ebe18c;
+      color: #000;
+  }
+  .selected{
+      background-color: #ebe18c;
+      color: #000;
+  }
+  .option-font{
+      font-family: "Niramit", sans-serif;
+      font-size: 32px;
+  }
+  @media screen and (min-width: 576px) {
+      .board-square-option{
+          height: 130px;
+      }
+      .option-grid{
+          grid-template-columns: 130px 130px 130px;  
+      }
+      .option-grid .middle{
+          height: 130px;
+      }
+  }
+  @media screen and (min-width: 992px) {
+      .board-square-option{
+          height: 180px;
+      }
+      .option-grid{
+          grid-template-columns: 180px 180px 180px;  
+      }
+      .option-grid .middle{
+          height: 180px;
+      }
+      .option-font{
+          font-size:  48px;
+      }
+  }
+  /************************************************* Option     End */
+  
+  /*************************************************  Game panel  */
+  .game-panel {
+    display: grid;
+    padding: 20px;
+    grid-template-rows: 2fr 1fr 1fr;
+  }
+  
+  .btn-area{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  h1 {
+    font-size: xx-large;
+    text-transform: uppercase;
+    font-family: "Tomorrow", sans-serif;
+    padding: 4px;
+  }
+  
+  .menu-btn {
+    font-family: "Tomorrow", sans-serif;
+    text-transform: uppercase;
+    /*margin-bottom: 15px;*/
+    padding: 4px;
+    width: 150px;
+    height: 40px;
+    font-size: 24px;
+  }
+  
+  .title-area {
+    justify-self: center;
+    text-align: center;
+    width: 80%;
+  }
+  
+  #user-instruction {
+    padding: 4px;
+    text-align: center;
+    align-self: end;
+    font-family: "Niramit", sans-serif;
+    font-size: 1em;
+  }
+  @media screen and (min-width: 576px){
+      h1{
+          font-size: 48px;
+      }
+  }
+  @media screen and (min-width: 992px){
+      h1{
+          font-size: 64px;
+      }
+  }
+  /*************************************************  User Panel   End  */
+  
+  /*************************************************  Board     */
+  .board-area{
+      height: 350px;
+      display: flex;
+      align-items: center;
+  }
+  .board {
+      display: grid;
+      width: 265px;
+      margin: auto auto;
+      grid-template-columns: 85px 85px 85px;
+      grid-gap: 5px;
+      padding: 20px 0;
+  }
+  .board-square {
+      display: flex;  /* added in for tutorial board*/
+      position: relative;
+      height: 85px;
+      background-color: #ebe18c;
+  }
+  .mark {
+      position: absolute;
+      transition: all 0.8s ease;
+      transform-style: preserve-3d;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .space{
+      position: absolute;
+      width: 100%;
+      height: 100%;  
+      /*background-color: #ebe18c;*/
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+  }
+  .marker-font {
+      font-family: "Tomorrow" , sans-serif;
+      font-size: 72px;
+      text-align: center;
+      align-items: center;
+  }
+  
+  .potential-mark{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: rotateY(180deg);
+  }
+  
+  @media screen and (min-width: 576px){
+      .board-area{
+          height: 600px;
+      }
+      .board {
+          width: 406px;
+          grid-template-columns: 130px 130px 130px;
+          grid-gap: 8px;
+      }
+      .board-square {
+          height: 130px;
+      }
+      .marker-font {
+          font-size: 108px;
+      }
+  }
+  
+  @media screen and (min-width: 992px){
+      .board-area{
+          height: 700px;
+      }
+  
+      .board {
+          width: 560px;
+          grid-template-columns: 180px 180px 180px;
+          grid-gap: 10px;
+      }
+      .board-square {
+          height: 180px;
+      }
+      .marker-font {
+         font-size: 145px;
+      }
+  }
+  
+  /*************************************************  Board   End */
+  
+  /*************************************************  Tutorial board     */
+  .example{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  /*************************************************  Tutorial board  End  */
+  
+  /*************************************************  Modal */
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-container{
+      position: absolute;
+      width: 90%;
+      height: 120px;
+      padding: 12px ;
+      border: 1px solid #888;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #d8a027;
+      font-size: 18px !important;
+  }
+  
+  .modal-header, .modal-footer {
+      display: inline-flex;
+      width: 100%;
+      height: 25%;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Tomorrow"  , sans-serif;
+  }
+  .modal-footer {
+      justify-content: space-around;
+  }
+  .modal-btn{
+      width: 105px;
+      background-color: #ebe18c;
+      font-family: "Niramit",sans-serif;
+      font-size: 18px;
+      padding: 2px 8px;
+  }
+  
+  #play-again:hover,
+  #quit:hover {
+    color: #dc3f1c;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-body{
+      height: 45%;
+      display: flex;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+      font-family: "Niramit" , sans-serif;
+  }
+  
+  
+  @media screen and (min-width: 576px){
+      .modal-container{
+          width: 50%;
+          height: 175px;
+          font-size: 21px !important;
+      }
+  }
+  @media screen and (min-width: 992px){
+      .modal-container{
+          width: 30%;
+          height: 200px;
+          font-size: 24px !important;
+      }
+  }
+  
+  /*************************************************  Modal   End */
+  
