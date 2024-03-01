@@ -17,16 +17,17 @@
     <div class="grad1">
     <h1 class="head">TIC TAC TOE GAME</h1>
 </div>
-<!--
+
+
     <p class="headtext">Select Your Game Type</p>
 
     <div class="row">
         <div class="column">
-            <input type="radio" id="inp1" name="game" onclick="myFunction() "> with Computer
+            <button type="button" class="bg-color-button menu-btn" id="inp1" name="game" onclick="myFunction()" style="height: auto;" > Against Computer
         </div>
-    -->    
-        <div class="column" style="margin-left: 20%;">
-            <input type="radio" id="inp2" name="game" onclick="myFunction2()"> Click to Play
+    
+        <div class="column">
+            <button type="button" class="bg-color-button menu-btn"  id="inp2" name="game" onclick="myFunction2()" style="height: auto;"> Two Players
         </div>
         <br>
 
@@ -36,16 +37,33 @@
 <br><br>
 <div id="inp5" style="text-align: center; margin-left: 33%; ">
 
-    <nav class="radio">
-    <p class="headtext">Select Your Player</p>
-    <input style="font-size: 40px; " type="radio" name="player" > X
-    <input  style="font-size: 40px; "type="radio" name="player"> O 
-</nav>
+   
     <p class="radio">Starting with X</p>
         
 		<!-- show player turn -->
 		<p id="print"></p>
 
+<!-- winning message -->
+
+<div class="TwoPlayers" id="gameover" aria-hidden="true">
+  <div class="TwoPlayers-container"> 
+      <div class="TwoPlayers-header">
+          <h3 class="TwoPlayers-title">Game Over</h3>
+      </div>
+      <div class="TwoPlayers-body">
+      </div>
+      <div class="TwoPlayers-footer">
+          <button onclick="window.location.href = 'file:///D:/Game/tictactoe/tic.html';" type="button" class="TwoPlayers-btn" id="quit">
+              Quit
+          </button>
+          <button type="button" class="TwoPlayers-btn"  onclick=" Reset_Game()">
+              Play again
+          </button>
+      </div>
+  </div>
+</div>
+
+<!-- grid -->
 <div class="table">
 		<input type="text" id="b1" onclick=
 			"myfunc_3(); myfunc();" readonly>
@@ -78,17 +96,11 @@
 			"myfunc_10();myfunc();" readonly>
 
 		<input type="text" id="b9" onclick=
-			"myfunc_11();myfunc();"style="background-color: steelblue; height: 100px;  font-size: 60px;
-            " readonly>
+			"myfunc_11();myfunc();" readonly>
 </div>
-		<br><br><br>
-		<button id="but" onclick="myfunc_2()">
-			RESET
-		</button>
-
-		<br><br>
 	</div>
-</div>
+
+
 
     <div id="inp4" style="text-align: center; margin-left: 33%; ">
         <div class="modal" id="gameover-msg" aria-hidden="true">
@@ -100,10 +112,10 @@
                     Congratulations, you won!
                 </div>
                 <div class="modal-footer">
-                    <button onclick="window.location.href = 'tictactoe-master/index.html';" type="button" class="modal-btn" id="quit">
+                    <button onclick="window.location.href = 'file:///D:/Game/tictactoe/tic.html';" type="button" class="modal-btn" id="quit">
                         Quit
                     </button>
-                    <button t ype="button" class="modal-btn" id="play-again" onclick="modalControl(this)">
+                    <button type="button" class="modal-btn" id="play-again" onclick="modalControl(this)">
                         Play again
                     </button>
                 </div>
@@ -178,6 +190,14 @@
           </div>
         </div>   
     </div>
-<!-->
+   
 </body>
 </html>
+
+
+
+
+
+
+
+
